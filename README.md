@@ -1,4 +1,4 @@
-# Angular2 - webpack ( Tasks app )
+# Angular2 - webpack ( Tasks )
 
 Application made with Angular2 / Typescript / Webpack - materialize
 
