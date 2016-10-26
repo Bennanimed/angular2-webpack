@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col s12">
+        <a materialize="leanModal" [materializeParams]="[{dismissible: true}]" class="waves-effect waves-light btn modal-trigger addtask" href="#modal1" (click)="openModal()">
+            <i class="material-icons left">add</i>Add New Task
+        </a>
+    </div>
+</div>
+<!-- Modal Structure -->
+<div id="modal1" class="modal" materialize [materializeActions]="modalActions">
+    <div class="modal-content">
+        <div class="row">
+            <h4>Add New Task</h4>
+        </div>
+        <div class="row">
+            <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="col s12" novalidate autocomplete="off">
+                <input type="text" formControlName="id" value="{{ uid }}" class="hide">
+                <input type="text" formControlName="done" value="{{ done }}" class="hide">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" formControlName="taskname" class="validate">
+                        <label for="taskname">Task Name</label>
+                        <from-errors
+                            [inputErrors]="taskForm.controls.taskname.errors"
+                            [inputPristine]="taskForm.controls.taskname.pristine"
+                        ></from-errors>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea formControlName="description" class="materialize-textarea"></textarea>
+                        <label for="description">Description</label>
+                        <from-errors
+                            [inputErrors]="taskForm.controls.description.errors"
+                            [inputPristine]="taskForm.controls.description.pristine"
+                        ></from-errors>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" (click)="resetForm()" class="modal-close waves-effect waves-green btn-flat">Close</button>
+                    <button type="submit" [disabled]="!taskForm.valid" class="waves-effect waves-green btn-flat">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

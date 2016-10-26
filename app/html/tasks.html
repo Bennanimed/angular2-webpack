@@ -1,0 +1,30 @@
+<newtask
+    (tasksUpdated)="updateTasks($event)"
+    [taskslist]="tasks"
+>
+</newtask>
+<div class="row">
+    <div class="col s12">
+        <ul class="collection with-header">
+            <li class="collection-header"><h4>Tasks List</h4></li>
+            <li class="collection-item" [ngClass]="task.done ? 'active' : ''" *ngFor="let task of tasks">
+                <span>{{ task.taskname | uppercase }}</span>
+                <a href="#" (click)="deleteTask(task.id)" class="secondary-content">
+                    <i class="material-icons">delete</i>
+                </a>
+                <a href="#" (click)="doneStatus(task)" class="secondary-content margin-right-btn">
+                    <i class="material-icons" *ngIf="task.done">thumb_down</i>
+                    <i class="material-icons" *ngIf="!task.done">thumb_up</i>
+                </a>
+            </li>
+            <div *ngIf="tasks.length === 0">
+                <div class="card-panel teal margin-10">
+                    <span class="white-text">To add new tasks click on the 'Add new task' button and fill the form, * all fields are required.<br>
+                    Over 5 inserted tasks the pagination will appear.
+                    </span>
+                </div>
+            </div>
+        </ul>
+        <pagination *ngIf="tabPages.length > 1" [actualPage]="actualpage" [totalPages]="tabPages" (loadPageAction)="loadTasks($event)"></pagination>
+    </div>
+</div>

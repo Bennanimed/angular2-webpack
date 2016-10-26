@@ -1,0 +1,45 @@
+.addtask {
+    margin-top: 20px;
+}
+from-errors {
+    color: #F44336;
+    font-size: 12px;
+}
+
+.input-field label[data-error].active:after {
+    font-size: 0.8rem;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+.input-field label[data-error]:after {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    -webkit-transform: translateY(-120%);
+    -moz-transform: translateY(-120%);
+    -ms-transform: translateY(-120%);
+    -o-transform: translateY(-120%);
+    transform: translateY(-120%);
+}
+
+form .row .col.s12 {
+      margin-bottom: 15px;
+}
+
+.margin-right-btn {
+    margin-right: 20px;
+}
+
+.loader-index {
+    height:90vh !important;
+}
+.brand-logo img {
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.margin-10 {
+    margin: 10px;
+}

@@ -1,0 +1,7 @@
+<ul class="pagination center">
+    <li [ngClass]="activePage === 1 ? 'disabled' : 'waves-effect'"><a href="#!" (click)="loadPage(activePage-1)"><i class="material-icons">chevron_left</i></a></li>
+
+    <li [ngClass]="page + 1 === activePage ? 'active waves-effect' : 'waves-effect'" *ngFor="let page of pages" (click)="loadPage(page+1)"><a href="#!">{{ page + 1 }}</a></li>
+
+    <li [ngClass]="activePage === pages.length ? 'disabled' : 'waves-effect'"><a href="#!" (click)="loadPage(activePage+1)"><i class="material-icons">chevron_right</i></a></li>
+</ul>
