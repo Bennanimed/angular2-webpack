@@ -1,6 +1,7 @@
 # Angular2 - webpack ( Tasks app )
 
 Application made with Angular2 / Typescript / Webpack - materialize
+
 Create tasks, change tasks status, delete tasks - with pagination
 
 ## Installing
