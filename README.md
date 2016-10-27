@@ -28,6 +28,7 @@ to change pagination limit number edit the value of const 'pageLimit' under 'app
 
 ## Dependencies
 
+```
 * @angular/common: ~2.0.1,
 * @angular/compiler: ~2.0.1,
 * @angular/core: ~2.0.1,
@@ -44,3 +45,4 @@ to change pagination limit number edit the value of const 'pageLimit' under 'app
 * rxjs: 5.0.0-beta.12,
 * systemjs: 0.19.39,
 * zone.js: ^0.6.25
+```
