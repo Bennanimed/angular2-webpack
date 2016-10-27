@@ -1,8 +1,8 @@
 # Angular2 - webpack ( Tasks )
 
-⋅⋅⋅Application made with Angular2 / Typescript / Webpack - materialize
-⋅⋅⋅Data are stored in localStorage
-⋅⋅⋅Create tasks, change tasks status, delete tasks - with pagination
+<dl>Application made with Angular2 / Typescript / Webpack - materialize</dl>
+<dl>Data are stored in localStorage</dl>
+<dl>Create tasks, change tasks status, delete tasks - with pagination</dl>
 
 ## Installing
 
