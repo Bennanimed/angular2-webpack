@@ -4,7 +4,7 @@
 <dl>Data are stored in localStorage</dl>
 <dl>Create tasks, change tasks status, delete tasks - with pagination</dl>
 
-![Image of angular2app](angular2-webpack/app/assets/jpg/angular2app-img.jpg)
+![Image of angular2app](https://github.com/Bennanimed/angular2-webpack/app/assets/jpg/angular2app-img.jpg)
 
 ## Installing
 
