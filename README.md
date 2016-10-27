@@ -2,7 +2,7 @@
 
 Application made with Angular2 / Typescript / Webpack - materialize
 
-Items are stored in localStorage
+Data are stored in localStorage
 
 Create tasks, change tasks status, delete tasks - with pagination
 
