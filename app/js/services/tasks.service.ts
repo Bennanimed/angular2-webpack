@@ -1,13 +1,13 @@
 'use strict';
 
-import {Injectable} from '@angular/core';
-import {Task}       from '../interfaces/task';
-import {pageLimit}  from '../parameters';
+import {Injectable}                 from '@angular/core';
+import {Task}                       from '../interfaces/task';
+import {pageLimit, taskIdentifier}  from '../parameters';
 
 @Injectable()
 
 export class TasksService {
-    identifier: string  = 'task-';
+    identifier: string  = taskIdentifier;
     _k: number          = 0;
     pageNumber: number  = 1;
     totalPages: number  = 0;
@@ -46,6 +46,7 @@ export class TasksService {
                     }
                 }
             }
+
             return tasklist;
         }
 

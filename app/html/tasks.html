@@ -1,6 +1,7 @@
 <newtask
     (tasksUpdated)="updateTasks($event)"
     [taskslist]="tasks"
+    #taskAction
 >
 </newtask>
 <div class="row">
@@ -12,6 +13,9 @@
                 <a href="#" (click)="deleteTask(task.id)" class="secondary-content">
                     <i class="material-icons">delete</i>
                 </a>
+                <a href="#" (click)="taskAction.editTask(task)" class="secondary-content margin-right-btn">
+                    <i class="material-icons">mode_edit</i>
+                </a>
                 <a href="#" (click)="doneStatus(task)" class="secondary-content margin-right-btn">
                     <i class="material-icons" *ngIf="task.done">thumb_down</i>
                     <i class="material-icons" *ngIf="!task.done">thumb_up</i>
@@ -19,8 +23,8 @@
             </li>
             <div *ngIf="tasks.length === 0">
                 <div class="card-panel teal margin-10">
-                    <span class="white-text">To add new tasks click on the 'Add new task' button and fill the form, * all fields are required.<br>
-                    Over 5 inserted tasks the pagination will appear.
+                    <span class="white-text">To add new tasks click on the 'Add new task' button and fill the form,<br>* all fields are required.
+                        Over 5 inserted tasks the pagination will appear.
                     </span>
                 </div>
             </div>
